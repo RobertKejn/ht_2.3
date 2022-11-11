@@ -21,7 +21,7 @@ void ViewAdress(Adress& adress) {
 int main()
 {
     std::setlocale(LC_ALL, "Russian");
-    const int n = 2;
+    int n = 2;
     Adress* adreses = new Adress[n];
 
     adreses[0].City = "Москва";
@@ -39,4 +39,6 @@ int main()
     for (int i = 0; i < n; ++i) {
         ViewAdress(adreses[i]);
     }
+
+    delete[] adreses;
 }
